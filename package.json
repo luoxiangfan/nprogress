@@ -1,6 +1,6 @@
 {
   "name": "nprogress-es",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "description": "nprogress rewrite with typescript",
   "type": "module",
@@ -42,7 +42,9 @@
     "dist",
     "nprogress.css"
   ],
-  "sideEffects": ["*.css"],
+  "sideEffects": [
+    "*.css"
+  ],
   "scripts": {
     "lint": "eslint . --fix",
     "type-check": "tsc --strict --noEmit",
