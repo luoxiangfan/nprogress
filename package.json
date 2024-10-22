@@ -1,6 +1,6 @@
 {
   "name": "nprogress-es",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "description": "nprogress rewrite with typescript",
   "type": "module",
