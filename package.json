@@ -1,0 +1,66 @@
+{
+  "name": "nprogress-es",
+  "version": "0.0.1",
+  "license": "MIT",
+  "description": "nprogress rewrite with typescript",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "browser": "dist/index.js",
+  "unpkg": "dist/index.min.js",
+  "jsdelivr": "dist/index.min.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.cts",
+  "repository": {
+    "type": "git",
+    "url": "git+git@github.com:luoxiangfan/nprogress.git"
+  },
+  "keywords": [
+    "nprogress",
+    "nprogress-es",
+    "nprogress es",
+    "typescript",
+    "javascript",
+    "js",
+    "ts",
+    "esm",
+    "ESModule"
+  ],
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.mts",
+        "default": "./dist/index.mjs"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "lint": "eslint . --fix",
+    "type-check": "tsc --strict --noEmit",
+    "format": "prettier --write src/ scripts/",
+    "clean": "node scripts/rm-file.js dist",
+    "copy-css": "node scripts/copy-css.js ./src/nprogress.css ./dist/nprogress.css",
+    "build-unbuild": "unbuild",
+    "build-rollup": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "build": "npm run clean && unbuild && npm run build-rollup && npm run copy-css",
+    "release": "npm run format && npm run build && release-it"
+  },
+  "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.1",
+    "@types/node": "^22.7.7",
+    "clean-css": "^5.3.3",
+    "eslint": "^9.13.0",
+    "prettier": "^3.3.3",
+    "release-it": "^17.10.0",
+    "rollup": "^4.24.0",
+    "typescript": "^5.6.3",
+    "unbuild": "^2.0.0"
+  }
+}
