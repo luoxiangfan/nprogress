@@ -15,7 +15,7 @@ Simply use `.start()` and `.done()` to control the start and end.
 
 ```typescript
 import NProgress from 'nprogress-es'
-import 'nprogress-es/dist/nprogress.css'
+import 'nprogress-es/nprogress.css' // or import 'nprogress-es/dist/nprogress.css'
 
 NProgress.start()
 NProgress.done()
