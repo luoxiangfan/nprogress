@@ -39,7 +39,9 @@
     "./dist/nprogress.css": "./src/nprogress.css"
   },
   "files": [
-    "dist"
+    "dist",
+    "nprogress.css",
+    "./distnprogress.css"
   ],
   "scripts": {
     "lint": "eslint . --fix",
