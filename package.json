@@ -36,14 +36,11 @@
         "default": "./dist/index.cjs"
       }
     },
-    "./nprogress.css": "./nprogress.css"
+    "./nprogress.css": "./nprogress.css",
+    "./dist/nprogress.css": "./nprogress.css"
   },
   "files": [
-    "dist",
-    "nprogress.css"
-  ],
-  "sideEffects": [
-    "*.css"
+    "dist"
   ],
   "scripts": {
     "lint": "eslint . --fix",
