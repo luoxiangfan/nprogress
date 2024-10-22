@@ -14,16 +14,16 @@ $ npm install nprogress-es
 Simply use `.start()` and `.done()` to control the start and end.
 
 ```typescript
-import Progress from 'nprogress-es'
+import NProgress from 'nprogress-es'
 import 'nprogress-es/dist/nprogress.css'
 
-Progress.start()
-Progress.done()
+NProgress.start()
+NProgress.done()
 ```
 
 You can also use `.set()`.
 
 ```typescript
-Progress.set(0) // same as Progress.start()
-Progress.set(100) // same as Progress.end()
+NProgress.set(0) // same as NProgress.start()
+NProgress.set(100) // same as NProgress.end()
 ```
