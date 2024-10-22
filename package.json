@@ -35,7 +35,8 @@
         "types": "./dist/index.d.cts",
         "default": "./dist/index.cjs"
       }
-    }
+    },
+    "./dist/nprogress.css": "./src/nprogress.css"
   },
   "files": [
     "dist"
