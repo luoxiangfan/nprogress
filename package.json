@@ -36,19 +36,19 @@
         "default": "./dist/index.cjs"
       }
     },
-    "./dist/nprogress.css": "./src/nprogress.css"
+    "./nprogress.css": "./nprogress.css"
   },
   "files": [
     "dist",
-    "nprogress.css",
-    "./dist/nprogress.css"
+    "nprogress.css"
   ],
+  "sideEffects": ["*.css"],
   "scripts": {
     "lint": "eslint . --fix",
     "type-check": "tsc --strict --noEmit",
     "format": "prettier --write src/ scripts/",
-    "clean": "node scripts/rm-file.js dist nprogress.css",
-    "copy-css": "node scripts/copy-css.js ./src/nprogress.css ./dist/nprogress.css ./nprogress.css",
+    "clean": "node scripts/rm-file.js dist",
+    "copy-css": "node scripts/copy-css.js ./src/nprogress.css ./dist/nprogress.css",
     "build-unbuild": "unbuild",
     "build-rollup": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
     "build": "npm run clean && unbuild && npm run build-rollup && npm run copy-css",
