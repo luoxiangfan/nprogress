@@ -32,8 +32,9 @@ function minisize(src, dest) {
 
 function start() {
   const args = process.argv.slice(2);
-  const [srcPath = 'src/nprogress.css', destPath = 'dist/index.css'] = args;
+  const [srcPath = 'src/nprogress.css', destPath = 'dist/nprogress.css', destPath2 = './nprogress.css'] = args;
   minisize(srcPath, destPath);
+  minisize(srcPath, destPath2);
 }
 
 start();
