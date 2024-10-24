@@ -3,7 +3,7 @@ import { defineConfig } from 'rollup'
 import terser from '@rollup/plugin-terser'
 import typescript from '@rollup/plugin-typescript'
 
-const loadJSON = (path: string) =>
+const loadJSON = (path) =>
   JSON.parse(readFileSync(new URL(path, import.meta.url)).toString())
 
 const pkg = loadJSON('./package.json')

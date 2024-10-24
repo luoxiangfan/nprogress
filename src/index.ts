@@ -1,5 +1,5 @@
-import { defaultSettins } from './settings';
-import type { ProgressSetting } from './type';
+import { defaultSettins } from './settings.js';
+import type { ProgressSetting } from './type.js';
 import {
   addClass,
   clamp,
@@ -9,7 +9,7 @@ import {
   removeClass,
   removeElement,
   toBarPerc
-} from './util';
+} from './util.js';
 
 class NProgress {
   settings: ProgressSetting;

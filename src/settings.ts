@@ -1,4 +1,4 @@
-import type { ProgressSetting } from './type';
+import type { ProgressSetting } from './type.js';
 
 export const defaultSettins: ProgressSetting = {
   minimum: 0.08,
