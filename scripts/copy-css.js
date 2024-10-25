@@ -2,38 +2,33 @@ import fs from 'fs';
 import path from 'path';
 import CleanCSS from 'clean-css';
 
-function ensureFileExistence(filePath) {
-  const dirPath = path.dirname(filePath);
-  if (!fs.existsSync(dirPath)) {
-    fs.mkdirSync(dirPath, { recursive: true });
+function copy(src, dest, modify, callback) {
+  const destPath = path.dirname(dest)
+  if (!fs.existsSync(destPath)) {
+    fs.mkdirSync(destPath, { recursive: true });
   }
-  if (!fs.existsSync(filePath)) {
-    fs.writeFileSync(filePath, '', 'utf8');
+  const srcStream = fs.createReadStream(src, {encoding: 'utf-8'})
+  const destStream = fs.createWriteStream(dest, {encoding: 'utf-8'})
+  if (modify) {
+    srcStream.on('data', data => {
+      callback(data, destStream)
+    })
+  } else {
+    srcStream.pipe(destStream)
+    callback(undefined, undefined)
   }
-}
-
-function minisize(src, dest) {
-  ensureFileExistence(dest);
-  fs.readFile(src, 'utf8', (err, data) => {
-    if (err) {
-      console.error(err);
-      return;
-    }
-    const cleanCSS = new CleanCSS({});
-    const minifiedCSS = cleanCSS.minify(data).styles;
-    fs.writeFile(dest, minifiedCSS, (err) => {
-      if (err) {
-        console.error(err);
-        return;
-      }
-    });
-  });
 }
 
 function start() {
   const args = process.argv.slice(2);
-  const [srcPath = 'src/nprogress.css', destPath = 'dist/nprogress.css'] = args;
-  minisize(srcPath, destPath);
+  const [srcPath = 'src/nprogress.css', destPath = 'dist/nprogress.css', modify = ''] = args;
+  copy(srcPath, destPath, modify === '--modify' ? true : false, (data, destStream) => {
+    if (modify === '--modify') {
+      const cleanCSS = new CleanCSS({});
+      const minifiedCSS = cleanCSS.minify(data).styles;
+      destStream.write(minifiedCSS);
+    }
+  });
 }
 
 start();
