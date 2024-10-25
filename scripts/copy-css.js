@@ -3,19 +3,19 @@ import path from 'path';
 import CleanCSS from 'clean-css';
 
 function copy(src, dest, modify, callback) {
-  const destPath = path.dirname(dest)
+  const destPath = path.dirname(dest);
   if (!fs.existsSync(destPath)) {
     fs.mkdirSync(destPath, { recursive: true });
   }
-  const srcStream = fs.createReadStream(src, {encoding: 'utf-8'})
-  const destStream = fs.createWriteStream(dest, {encoding: 'utf-8'})
+  const srcStream = fs.createReadStream(src, { encoding: 'utf-8' });
+  const destStream = fs.createWriteStream(dest, { encoding: 'utf-8' });
   if (modify) {
-    srcStream.on('data', data => {
-      callback(data, destStream)
-    })
+    srcStream.on('data', (data) => {
+      callback(data, destStream);
+    });
   } else {
-    srcStream.pipe(destStream)
-    callback(undefined, undefined)
+    srcStream.pipe(destStream);
+    callback(undefined, undefined);
   }
 }
 
