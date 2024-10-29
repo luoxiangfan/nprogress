@@ -48,7 +48,7 @@
     "type-check": "tsc --strict --noEmit",
     "format": "prettier --write src/ scripts/",
     "clean": "node-rmrf dist",
-    "copy-css": "node scripts/copy-css.js ./src/nprogress.css ./dist/nprogress.css --modification",
+    "copy-css": "node scripts/copy-css.js ./src/nprogress.css ./dist/nprogress.css --modify",
     "build-unbuild": "unbuild",
     "build-rollup": "rollup -c",
     "build": "npm run clean && unbuild && npm run build-rollup && npm run copy-css",
