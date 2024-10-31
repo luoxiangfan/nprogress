@@ -48,7 +48,7 @@
     "type-check": "tsc --strict --noEmit",
     "format": "prettier --write src/ scripts/",
     "clean": "node-rmrf dist",
-    "copy-css": "node scripts/copy-css.js ./src/nprogress.css ./dist/nprogress.css --modify",
+    "copy-css": "node scripts/copy-css.js ./src/nprogress.css ./nprogress.css --modify",
     "build-unbuild": "unbuild",
     "build-rollup": "rollup -c",
     "build": "npm run clean && unbuild && npm run build-rollup && npm run copy-css",
@@ -57,13 +57,13 @@
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.1.1",
-    "@types/node": "^22.7.7",
+    "@types/node": "^22.8.4",
     "clean-css": "^5.3.3",
     "eslint": "^9.13.0",
-    "node-rmrf": "^1.0.1",
+    "node-rmrf": "^1.0.3",
     "prettier": "^3.3.3",
     "release-it": "^17.10.0",
-    "rollup": "^4.24.0",
+    "rollup": "^4.24.3",
     "typescript": "^5.6.3",
     "unbuild": "^2.0.0"
   }
