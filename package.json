@@ -57,7 +57,7 @@
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.1.1",
-    "@types/node": "^22.8.4",
+    "@types/node": "^22.9.0",
     "clean-css": "^5.3.3",
     "eslint": "^9.13.0",
     "node-rmrf": "^1.0.3",
