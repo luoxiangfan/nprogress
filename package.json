@@ -41,7 +41,8 @@
   },
   "files": [
     "dist",
-    "nprogress.css"
+    "nprogress.css",
+    "README.md"
   ],
   "scripts": {
     "lint": "eslint . --fix",
