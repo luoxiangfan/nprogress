@@ -57,13 +57,13 @@
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.1.1",
-    "@types/node": "^22.10.0",
+    "@types/node": "^22.10.1",
     "clean-css": "^5.3.3",
-    "eslint": "^9.15.0",
-    "node-rmrf": "^1.0.4",
-    "prettier": "^3.4.1",
+    "eslint": "^9.16.0",
+    "node-rmrf": "^1.0.7",
+    "prettier": "^3.4.2",
     "release-it": "^17.10.0",
-    "rollup": "^4.27.4",
+    "rollup": "^4.28.1",
     "typescript": "^5.7.2",
     "unbuild": "^2.0.0"
   }
