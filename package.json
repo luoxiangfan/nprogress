@@ -53,19 +53,18 @@
     "build-unbuild": "unbuild",
     "build-rollup": "rollup -c",
     "build": "npm run clean && unbuild && npm run build-rollup && npm run copy-css",
-    "release": "npm run format && npm run build && release-it"
+    "release": "npm run format && npm run build && npm publish"
   },
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
-    "@rollup/plugin-typescript": "^12.1.1",
-    "@types/node": "^22.10.1",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@types/node": "^22.10.2",
     "clean-css": "^5.3.3",
-    "eslint": "^9.16.0",
+    "eslint": "^9.17.0",
     "node-rmrf": "^1.0.7",
     "prettier": "^3.4.2",
-    "release-it": "^17.10.0",
     "rollup": "^4.28.1",
     "typescript": "^5.7.2",
-    "unbuild": "^2.0.0"
+    "unbuild": "^3.0.1"
   }
 }
