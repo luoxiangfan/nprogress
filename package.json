@@ -1,6 +1,6 @@
 {
   "name": "nprogress-es",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "license": "MIT",
   "description": "nprogress rewrite with typescript",
   "type": "module",
@@ -26,9 +26,9 @@
     "./dist/nprogress.css": "./nprogress.css"
   },
   "files": [
-    "dist",
-    "nprogress.css",
-    "README.md"
+    "index.js",
+    "index.d.ts",
+    "nprogress.css"
   ],
   "scripts": {
     "lint": "eslint . --fix",
