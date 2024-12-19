@@ -20,6 +20,7 @@ function copy(src, dest, modify, callback) {
 }
 
 function start() {
+  fs.closeSync(fs.openSync('nprogress.css', 'w'));
   const args = process.argv.slice(2);
   const [srcPath = 'src/nprogress.css', destPath = 'dist/nprogress.css', modify = ''] = args;
   copy(srcPath, destPath, modify === '--modify' ? true : false, (data, destStream) => {
