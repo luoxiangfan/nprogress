@@ -1,6 +1,6 @@
 {
   "name": "nprogress-es",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "license": "MIT",
   "description": "nprogress rewrite with typescript",
   "type": "module",
@@ -36,7 +36,7 @@
     "format": "prettier --write src/ scripts/",
     "clean": "node-rmrf dist",
     "copy-css": "node scripts/copy-css.js ./src/nprogress.css ./nprogress.css --modify",
-    "build-rollup": "rollup -c",
+    "build-rollup": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
     "build": "npm run clean && npm run build-rollup && npm run copy-css",
     "release": "npm run format && npm run build && npm publish"
   },
