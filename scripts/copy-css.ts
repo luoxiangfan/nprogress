@@ -2,7 +2,12 @@ import fs from 'fs';
 import path from 'path';
 import CleanCSS from 'clean-css';
 
-function copy(src, dest, modify, callback) {
+function copy(
+  src: string,
+  dest: string,
+  modify: boolean,
+  callback: (data?: string | Buffer<ArrayBufferLike>, stream?: fs.WriteStream) => void
+) {
   const destPath = path.dirname(dest);
   if (!fs.existsSync(destPath)) {
     fs.mkdirSync(destPath, { recursive: true });
@@ -24,10 +29,10 @@ function start() {
   const args = process.argv.slice(2);
   const [srcPath = 'src/nprogress.css', destPath = 'dist/nprogress.css', modify = ''] = args;
   copy(srcPath, destPath, modify === '--modify' ? true : false, (data, destStream) => {
-    if (modify === '--modify') {
+    if (modify === '--modify' && data) {
       const cleanCSS = new CleanCSS({});
       const minifiedCSS = cleanCSS.minify(data).styles;
-      destStream.write(minifiedCSS);
+      destStream?.write(minifiedCSS);
     }
   });
 }
