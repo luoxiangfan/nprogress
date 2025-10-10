@@ -47,13 +47,13 @@
   "devDependencies": {
     "@rollup/plugin-typescript": "^12.1.4",
     "@types/clean-css": "^4.2.11",
-    "@types/node": "^24.3.1",
+    "@types/node": "^24.7.0",
     "clean-css": "^5.3.3",
-    "eslint": "^9.35.0",
+    "eslint": "^9.37.0",
     "node-rmrf": "^1.2.1",
     "prettier": "^3.6.2",
-    "rollup": "^4.50.1",
+    "rollup": "^4.52.4",
     "tslib": "^2.8.1",
-    "typescript": "^5.9.2"
+    "typescript": "^5.9.3"
   }
 }
