@@ -1,4 +1,4 @@
-import { defaultSettins } from './settings.js';
+import { defaultSettings } from './settings.js';
 import type { ProgressSetting } from './type.js';
 import {
   addClass,
@@ -15,7 +15,7 @@ class NProgress {
   settings: ProgressSetting;
 
   constructor(settings?: ProgressSetting) {
-    this.settings = settings || defaultSettins;
+    this.settings = settings || defaultSettings;
   }
 
   get isRendered(): boolean {
@@ -219,7 +219,7 @@ class NProgress {
   }
 }
 
-const nprogress = new NProgress(defaultSettins);
+const nprogress = new NProgress(defaultSettings);
 
 export type { ProgressSetting };
 

@@ -1,6 +1,6 @@
 import type { ProgressSetting } from './type.js';
 
-export const defaultSettins: ProgressSetting = {
+export const defaultSettings: ProgressSetting = {
   minimum: 0.08,
   easing: 'linear',
   positionUsing: '',
