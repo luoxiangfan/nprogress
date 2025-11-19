@@ -1,6 +1,6 @@
 {
   "name": "nprogress-es",
-  "version": "1.5.1",
+  "version": "1.5.2",
   "license": "MIT",
   "description": "nprogress rewrite with typescript",
   "type": "module",
@@ -39,7 +39,7 @@
     "type-check": "tsc --strict --noEmit",
     "format": "prettier --write src/ scripts/",
     "clean": "node-rmrf dist",
-    "copy-css": "node scripts/copy-css.ts ./src/nprogress.css ./nprogress.css --modify",
+    "copy-css": "tsx scripts/copy-css.ts ./src/nprogress.css ./nprogress.css --modify",
     "build-rollup": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
     "build": "npm run clean && npm run build-rollup && npm run copy-css",
     "release": "npm run format && npm run build && npm publish"
@@ -52,8 +52,9 @@
     "eslint": "^9.39.1",
     "node-rmrf": "^1.2.1",
     "prettier": "^3.6.2",
-    "rollup": "^4.53.2",
+    "rollup": "^4.53.3",
     "tslib": "^2.8.1",
+    "tsx": "^4.20.6",
     "typescript": "^5.9.3"
   }
 }
