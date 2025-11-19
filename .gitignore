@@ -1,6 +1,5 @@
 node_modules
 dist
 npm-cache
-index.d.ts
 nprogress.css
 index.js
