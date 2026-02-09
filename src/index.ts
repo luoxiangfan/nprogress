@@ -147,7 +147,7 @@ class NProgress {
 
     if (!this.settings.showSpinner) {
       const spinner = progress.querySelector(this.settings.spinnerSelector);
-      spinner && removeElement(spinner as HTMLElement);
+      removeElement(spinner);
     }
 
     if (parent != document.body) {
@@ -160,12 +160,12 @@ class NProgress {
 
   remove() {
     removeClass(document.documentElement, 'nprogress-busy');
-    var parent = isHTMLElement(this.settings.parent)
+    const parent = isHTMLElement(this.settings.parent)
       ? this.settings.parent
       : document.querySelector<HTMLElement>(this.settings.parent)!;
     removeClass(parent, 'nprogress-custom-parent');
-    var progress = document.getElementById('nprogress');
-    progress && removeElement(progress);
+    const progress = document.getElementById('nprogress');
+    removeElement(progress);
   }
 
   trickle() {

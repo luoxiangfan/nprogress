@@ -100,6 +100,6 @@ export const removeClass = (element: HTMLElement, name: string) => {
   element.className = newList.substring(1, newList.length - 1);
 };
 
-export const removeElement = (element: HTMLElement) => {
-  element && element.parentNode && element.parentNode.removeChild(element);
+export const removeElement = (element: HTMLElement | Element | null) => {
+  element?.parentNode?.removeChild(element);
 };
