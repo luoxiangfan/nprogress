@@ -47,9 +47,9 @@
   "devDependencies": {
     "@rollup/plugin-typescript": "^12.3.0",
     "@types/clean-css": "^4.2.11",
-    "@types/node": "^25.3.0",
+    "@types/node": "^25.3.3",
     "clean-css": "^5.3.3",
-    "eslint": "^10.0.1",
+    "eslint": "^10.0.2",
     "node-rmrf": "^1.2.2",
     "prettier": "^3.8.1",
     "rollup": "^4.59.0",
