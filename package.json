@@ -45,7 +45,7 @@
     "release": "npm run format && npm run build && npm publish"
   },
   "devDependencies": {
-    "@rollup/plugin-typescript": "^12.3.0",
+    "@rollup/plugin-typescript": "^12.3.1",
     "@types/clean-css": "^4.2.11",
     "@types/node": "^26.6.5",
     "clean-css": "^5.3.3",
